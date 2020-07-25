@@ -6,8 +6,9 @@
     <title>self-chamando constante</title>
 </head>
 <body>
-            <?php
+          
                <?php
+
                class Pessoa{
                const nome="Rodrigo";
                       
@@ -18,8 +19,7 @@
           
               $pessoa= new Pessoa();
               $pessoa->ColocarNome();
-          
-           ?>
+        
        
             ?>
 </body>
