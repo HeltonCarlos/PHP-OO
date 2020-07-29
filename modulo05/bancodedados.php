@@ -1,5 +1,5 @@
 <?php
-
+//connect- conexão com banco de dados
 
 try {
     $pdo = new PDO("mysql:dbname=CRUDPDO;host=localhost","root","");
@@ -10,3 +10,19 @@ catch (PDOException $e) {
 catch (Exception $e){
     echo 'Erro generico'.$e->getMessage();
 }
+
+//insert- inserir no banco de dados
+
+
+                //1° forma
+
+                $res = $pdo->prepare("INSERT INTO pessoa(nome,telefone,email)VALUES(:n,:t,:e)");
+
+                $res->bindValue(":n", "Helton");
+                $res->bindValue(":t", "(75)9.99999-8887");
+                $res->bindValue(":e", "helton@gmail.com");
+                $res->execute();    
+
+                //2° forma
+
+                $pdo->query("INSERT INTO pessoa(nome,telefone,email) VALUES('Valdice','(75)988888555','val@gmail.com')");
