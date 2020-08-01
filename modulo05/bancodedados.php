@@ -26,3 +26,16 @@ catch (Exception $e){
                 //2° forma
 
                 $pdo->query("INSERT INTO pessoa(nome,telefone,email) VALUES('Valdice','(75)988888555','val@gmail.com')");
+
+
+
+//deletar- deletar no banco de dados
+       
+                //1° forma
+                $del=$pdo->prepare("DELETE FROM pessoa WHERE id = :id");
+                $id=10;
+                $del->bindValue(":id",$id);
+                $del->execute();
+                
+                //2° forma
+                $del=$pdo->query("DELETE FROM pessoa WHERE id ='6'");
