@@ -39,3 +39,14 @@ catch (Exception $e){
                 
                 //2° forma
                 $del=$pdo->query("DELETE FROM pessoa WHERE id ='6'");
+
+//update- mudar no banco de dados
+
+   //1° forma
+$mud = $pdo->prepare("UPDATE pessoa SET nome= :n WHERE id=:id");
+$mud->bindValue(':n', 'brito');
+$mud->bindValue(':id', '7');
+$mud->execute();
+ //2° forma
+$mud= $pdo->query("UPDATE pessoa SET telefone='8888888' WHERE id='7'");
+
