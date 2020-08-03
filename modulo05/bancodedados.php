@@ -50,3 +50,12 @@ $mud->execute();
  //2° forma
 $mud= $pdo->query("UPDATE pessoa SET telefone='8888888' WHERE id='7'");
 
+
+//SELECT- BUSCAR INFORMAÇÃO
+$sec = $pdo->prepare("SELECT*FROM pessoa WHERE id=:id");
+$sec->bindValue(":id",4);
+$sec->execute();
+$resultado=$sec->fetch(PDO::FETCH_ASSOC);
+foreach ($resultado as $key => $value) {
+    echo $key.": ".$value."<br>";
+}
