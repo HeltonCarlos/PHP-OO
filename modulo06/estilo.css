@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0;box-sizing: border-box;font-family: monospace;}
+a{text-decoration: none;}
+body{background-color: rgb(19, 45, 192);}
+
+section{max-width: 80%;margin: auto;margin: 20px;}
+
+section h1{margin-bottom: 20px;color: #fff; font-size: 30px;}
+
+form{width: 50%; background-color: #ccc;color: #000000;padding: 20px;
+box-shadow: 0.8px 0.8px 2px;}
+
+form label{margin-left: 20px;font-weight: bolder;}
+
+input{display: block;padding: 4px 15px 4px 15px;margin-top: 8px; margin-bottom: 2px;}
+
+input[type=button]{margin-top: 20px;
+background-color: rgb(20, 12, 134);color:#fff;
+padding: 8px 30px 8px 30px;;
+border-radius: 5px;
+border: none;box-shadow: 1px 1px 2px;}
+
+input[type=button]:hover{transition: 1s;
+background-color: rgb(107, 9, 199);}
+
+textarea{display: block;padding-left: 20px;}
